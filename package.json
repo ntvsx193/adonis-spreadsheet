@@ -1,0 +1,62 @@
+{
+  "name": "adonis-spreadsheet",
+  "version": "1.0.0",
+  "description": "Spread sheet provider for adonis framework and has support for csv, xls, xlsx, ods",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "posttest": "npm run coverage",
+    "test:local": "FORCE_COLOR=true node bin/index.js --local",
+    "test": "nyc npm run test:local",
+    "test:win": "set FORCE_COLOR=true && node bin/index.js --win",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [
+    "adonis",
+    "adonis-framework",
+    "spread",
+    "sheet",
+    "csv",
+    "xls",
+    "xlsx",
+    "ods"
+  ],
+  "author": "Artem Kolesnik <kolesnik.artem.g@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@adonisjs/sink": "^1.0.13",
+    "coveralls": "^2.13.1",
+    "cz-conventional-changelog": "^2.0.0",
+    "japa": "^1.0.4",
+    "japa-cli": "^1.0.1",
+    "nyc": "^11.1.0",
+    "semver": "^5.4.1",
+    "standard": "^10.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "nyc": {
+    "exclude": [
+      "bin"
+    ]
+  },
+  "dependencies": {
+    "@adonisjs/validator": "^4.0.3",
+    "xlsx": "^0.11.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntvsx193/adonis-spreadsheet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ntvsx193/adonis-spreadsheet/issues"
+  },
+  "homepage": "https://github.com/ntvsx193/adonis-spreadsheet#readme"
+}
