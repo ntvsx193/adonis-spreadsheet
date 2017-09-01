@@ -44,7 +44,8 @@
   },
   "nyc": {
     "exclude": [
-      "bin"
+      "bin",
+      "lib"
     ]
   },
   "dependencies": {
