@@ -1,6 +1,6 @@
 {
   "name": "adonis-spreadsheet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spread sheet provider for adonis framework and has support for csv, xls, xlsx, ods",
   "main": "index.js",
   "directories": {
