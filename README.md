@@ -19,7 +19,7 @@ The provider is registered inside `start/app.js` file under `providers` array.
 
 ```js
 const providers = [
-  'adonis-query/providers/SpreadSheetProvider'
+  'adonis-spreadsheet/providers/SpreadSheetProvider'
 ]
 ```
 
@@ -59,6 +59,8 @@ Route.get('/users/export/:format', async ({ request, response, params }) => {
   ss.download('users-export')
 })
 ```
+
+Then you can fire url `/rest/users/export/csv` and received csv file sheet. 
 
 ## Supported formats
 
