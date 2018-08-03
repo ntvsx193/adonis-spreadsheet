@@ -32,8 +32,8 @@ const Route = use('Route')
 const SpreadSheet = use('SpreadSheet')
 const User = use('App/Models/User')
 
-Route.get('/users/export/:format', async ({ request, response, params }) => {
-  const ss = new SpreadSheet(request, params.format)
+Route.get('/users/export/:format', async ({ response, params }) => {
+  const ss = new SpreadSheet(response, params.format)
   
   const users = await User.all()
   const data = []
@@ -46,7 +46,7 @@ Route.get('/users/export/:format', async ({ request, response, params }) => {
     'Phone'
   ])
 
-  users.toJSON().forEach((user) => {
+  users.toJSON().forEach(user => {
     data.push([
       user.id,
       user.first_name,
