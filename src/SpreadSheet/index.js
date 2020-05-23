@@ -63,7 +63,7 @@ class SpreadSheet {
       },
       xlsx: {
         bookType: 'xlsx',
-        header: 'application/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        header: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
       },
       csv: {
         bookType: 'csv',
